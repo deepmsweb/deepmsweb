@@ -1047,7 +1047,7 @@ section {
 --------------------------------------------------------------*/
 #detectionHero {
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   background: url("../img/mainDetec.jpg") top center;
   background-size: cover;
   position: relative;
