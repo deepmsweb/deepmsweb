@@ -6,7 +6,6 @@ from mrcnn import visualize
 from mrcnn import utils
 from py import configFile
 from py import metricQc
-from py import metreE
 from py import deepmswebFx
 from flask import Flask, url_for, request, render_template, Response, jsonify, redirect, flash, abort
 from werkzeug.utils import secure_filename
@@ -166,7 +165,7 @@ def msFinderCompare():
                 result = deepmswebFx.maskCompound(r['masks'])
                 reference = deepmswebFx.maskCompound(gt_mask)
 
-                olcekler1["DC"] = metreE.dc(result, reference)
+                olcekler1["DC"] = metricQc.dice(result, reference)
                 iou = utils.compute_overlaps_masks(result, reference)[0][0]
                 olcekler1["VOE"] = 1 - iou
                 olcekler1["LTPR"] = metricQc.ltpr(result, reference)
