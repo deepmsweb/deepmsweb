@@ -167,16 +167,10 @@ def msFinderCompare():
                 reference = deepmswebFx.maskCompound(gt_mask)
 
                 olcekler1["DC"] = metreE.dc(result, reference)
-                #olcekler1["JC"] = metreE.jc(result, reference)
-                #olcekler1["IOU"] = utils.compute_overlaps_masks(result, reference)[0][0]
                 iou = utils.compute_overlaps_masks(result, reference)[0][0]
                 olcekler1["VOE"] = 1 - iou
                 olcekler1["LTPR"] = metricQc.ltpr(result, reference)
                 olcekler1["LFPR"] = metricQc.lfpr(result, reference)
-                # vol = np.count_nonzero(result)
-                # if not(vol == 0):
-                #     olcekler1["ASD"] = metreE.asd(result, reference)
-                #     olcekler1["ASSD"] = metreE.assd(result, reference)
 
                 title = "DeepMSWeb - Automatic MS Detection"
                 cap = "Automatic MS Detection"
@@ -206,7 +200,7 @@ def msFinderCompare():
         abort(401)
 
 
-################# Follow -Up Links##########
+
 
 
 @app.route('/about')

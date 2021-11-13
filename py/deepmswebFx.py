@@ -60,8 +60,7 @@ def compareM(masks1, masks2):
         tinyC = 0
         bigC = 0
         i = 0
-        r1 = []
-        r2 = []
+
         for i in range(ix):
             mask1 = masks1[:, :, i]
             for t in range(iy):
