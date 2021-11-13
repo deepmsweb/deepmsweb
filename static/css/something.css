@@ -1,0 +1,58 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+#upload0,#upload1,#upload2,#uploadJson {
+    opacity: 0;
+}
+
+#upload0-label,#upload1-label, #upload2-label, #uploadJson-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    border: 2px dashed rgba(0, 0, 0, 0.103);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Uploaded image result';
+    color: rgb(97, 96, 96);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+
+
+body {
+    
+    background-color: #d2d2d2;
+    background-image: linear-gradient(120deg, #d2d2d2 0%, #9f9f9f 100%);
+    background-attachment: fixed;
+}
+
+*/
