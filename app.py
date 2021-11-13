@@ -95,7 +95,7 @@ def msDetectionCompare():
     json = True
     return render_template('detection.html', title=title, cap=cap, abstract=abstract, fx=fxUrl, json1=json)
 
-
+ 
 @app.route('/msFinderCompare', methods=['POST'])
 def msFinderCompare():
     messages = {}
