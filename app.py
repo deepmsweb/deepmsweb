@@ -87,8 +87,8 @@ def detecFile(filename):
 
 @app.route('/msDetectionCompare')
 def msDetectionCompare():
-    title = "DeepMSWeb - Automatic MS Detection"
-    cap = "Automatic MS Detection"
+    title = "DeepMSWeb - Automatic Detection of MS Lesions"
+    cap = "Automatic Detection of MS Lesions"
     abstract = "This application page that automatically detects MS plaques in MR images and compares them with physician vision. For this, you must load the segmentation information of the MR images in VGG 1.0.6 format. "
     fxUrl = url_for("msFinderCompare")
     json = True
@@ -171,8 +171,8 @@ def msFinderCompare():
                 olcekler1["LTPR"] = metricQc.ltpr(result, reference)
                 olcekler1["LFPR"] = metricQc.lfpr(result, reference)
 
-                title = "DeepMSWeb - Automatic MS Detection"
-                cap = "Automatic MS Detection"
+                title = "DeepMSWeb - Automatic Detection of MS Lesions"
+                cap = "Automatic Detection of MS Lesions"
                 abstract = "As a result of the investigations; the automatically detected MS plaque(s) of the "+filename.split(
                     '.')[0]+" file are displayed in detail."
                 return render_template('detectionPre.html', title=title, cap=cap, abstract=abstract,
@@ -184,8 +184,8 @@ def msFinderCompare():
                 messages["jsonEx"] = {
                     "message": "MS lession only automatic founded, Ground Truth file not exist or wrong", "type": "danger"}
 
-            title = "DeepMSWeb - Automatic MS Detection"
-            cap = "Automatic MS Detection"
+            title = "DeepMSWeb - Automatic Detection of MS Lesions"
+            cap = "Automatic Detection of MS Lesions"
             abstract = "As a result of the investigations; the automatically detected MS plaque(s) of the "+filename.split(
                 '.')[0]+" file without ground truth are denoted in detail."
             return render_template('detectionPre.html', title=title, cap=cap, abstract=abstract,
