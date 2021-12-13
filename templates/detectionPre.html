@@ -14,12 +14,12 @@
 
 <main id="main" class="container">
     {% if abstract %}
-    <p class="py-3">{{abstract}}</p>
+    <p class="pt-3 m-0">{{abstract}}</p>
     {%endif%}
 
     {% with messagesX= get_flashed_messages(with_categories=true)%}
     {% if messagesX%}
-    <div class="row py-2">
+    <div class="row">
         {% for category,message in messagesX %}
         <div class="col-md-4 mx-auto px-3">
             <p class=" alert alert-{{category}}" role="alert">{{ message }}</p>
@@ -31,10 +31,10 @@
     {% endif %}
     {% endwith %}
 
-    <div class="row py-2">
+    <div class="row pt-2">
         {% if olcekler1 %}
-        <div class="col-md-6 mx-auto px-3 ">
-            <h4 class="py-3 text-center">Detection scores using evaluation metrics</h4>
+        <div class="col-md-3  mx-auto ">
+            <h5 class="text-center">Detection scores using evaluation metrics</h5>
             <table class="table table-sm mx-auto table-hover ">
                 <thead>
                     <tr>
@@ -56,7 +56,7 @@
         {%endif%}
 
         {% if messages %}
-        <div class="col-md-6 mx-auto px-3 ">
+        <div class="col-md-8 mx-auto px-3 ">
             <ul class="list-group">
                 {% for key, value in messages.items() %}
                 <li class="list-group-item list-group-item-{{value.type}} mb-3">
@@ -68,34 +68,35 @@
         {%endif%}
     </div>
 
-    <div class="row py-2">
-        <div class="btn-toolbar m-2 justify-content-center " role="toolbar">
-            <div class="btn-group-md m-2 text-center " role="group" aria-label="Orjinal MRI Show / Hide">
-                <button type="button" class="btn btn-outline-success mx-3  my-1 p-md-2 rounded"
-                    onclick="showHide('predFile'); showHide('GTOverFile');showHide('GTFile');showHide('orjFile');">
-                    Show / Hide All</button>
-                {%if predFileName%} <button type="button" class="btn btn-outline-success mx-3 p-2 rounded"
+    <div class="row">
+        <div class="btn-toolbar justify-content-center " role="toolbar">
+            <div class="btn-group-md text-center " role="group" aria-label="Orjinal MRI Show / Hide">
+
+                {%if predFileName%} <button type="button" class="btn btn-outline-success rounded"
                     onclick="showHide('predFile');">
                     Show / Hide Prediction MRI</button> {%endif%}
-                {%if GTOverFileName%} <button type="button" class="btn btn-outline-success  mx-3 p-2 rounded"
+                {%if GTOverFileName%} <button type="button" class="btn btn-outline-success  rounded"
                     onclick="showHide('GTOverFile');">
-                    Show / Hide GT- Prediction Overlaps MRI</button>{%endif%}
-                {%if GTFileName%}<button type="button" class="btn btn-outline-success  mx-3 p-2 rounded"
+                    Show / Hide Overlap MRI</button>{%endif%}
+                {%if GTFileName%}<button type="button" class="btn btn-outline-success  rounded"
                     onclick="showHide('GTFile');">
                     Show / Hide GT MRI</button>{%endif%}
-                {%if orjFile%}<button type="button" class="btn btn-outline-success mx-3 p-2 rounded"
+                {%if orjFile%}<button type="button" class="btn btn-outline-success  rounded"
                     onclick="showHide('orjFile');">
                     Show / Hide Orjinal MRI</button>{%endif%}
+                <button type="button" class="btn btn-outline-success rounded"
+                    onclick="showHide('predFile'); showHide('GTOverFile');showHide('GTFile');showHide('orjFile');">
+                    Show / Hide All</button>
             </div>
         </div>
     </div>
 </main>
-<section id="detectionPre" class="container p-2 mx-auto">
-    <div class="row py-2 justify-content-center ">
+<section id="detectionPre" class="container p-0 mx-auto">
+    <div class="row justify-content-center ">
         {%if orjFile%}
         <div class="card  p-2 m-2 col-md-5 " id="orjFile">
             <a href="{{url_for('detecFile',filename=orjFile)}}" class="glightbox2"
-                data-glightbox='Bottom; description:Original MRI Slice' id="predFile">
+                data-glightbox='Bottom; description:Original MRI Slice' id="fileX">
                 <img id="imageResult" src="{{url_for('detecFile',filename=orjFile)}}" alt=""
                     class="img-fluid rounded shadow-sm mx-auto d-block w-100 ">
             </a>
@@ -104,14 +105,14 @@
                     Original MRI Slice
                 </h6>
             </div>
-        
+
         </div>
-        
+
         {%endif%}
         {%if GTFileName%}
         <div class="card  p-2 m-2 col-md-5 " id="GTFile">
             <a href="{{url_for('detecFile',filename=GTFileName)}}" class="glightbox2"
-                data-glightbox='Bottom; description:Physician Selection Plaques' id="predFile">
+                data-glightbox='Bottom; description:Physician Selection Plaques' id="fileX">
                 <img id="imageResult" src="{{url_for('detecFile',filename=GTFileName)}}" alt=""
                     class="img-fluid rounded shadow-sm mx-auto d-block">
             </a>
@@ -120,15 +121,15 @@
                     Physician Selection Plaques (Ground Truth)
                 </h6>
             </div>
-        
+
         </div>
-        
+
         {%endif%}
         {%if predFileName%}
 
-        <div class="card  p-2 m-2 col-md-5  " id="predFile">
+        <div class="card  p-2 m-2 col-md-5" id="predFile">
             <a href="{{url_for('detecFile',filename=predFileName)}}" class="glightbox2"
-                data-glightbox='Bottom; description:Automatically Detected Plaques on MRI' id="predFile">
+                data-glightbox='Bottom; description:Automatically Detected Plaques on MRI' id="fileX">
                 <img id="imageResult" src="{{url_for('detecFile',filename=predFileName)}}" alt=""
                     class="img-fluid rounded shadow-sm mx-auto d-block">
             </a>
@@ -145,7 +146,7 @@
         <div class="card  p-2 m-2 col-md-5 " id="GTOverFile">
             <a href="{{url_for('detecFile',filename=GTOverFileName)}}" class="glightbox2"
                 data-glightbox='Bottom; description:Overlap of Automatically Detected and Specialist Physician Selection Plaques'
-                id="predFile">
+                id="fileX">
                 <img id="imageResult" src="{{url_for('detecFile',filename=GTOverFileName)}}" alt=""
                     class="img-fluid rounded shadow-sm mx-auto d-block">
             </a>
