@@ -1,0 +1,18 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  DeepMSWeb: A Web-Based Decision Support System via
+  Deep Learning for Automatic Detection of MS Lesions
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - name-particle: Mehmet Süleyman
+    family-names: YILDIRIM
+    email: mehmets.yildirim@bilecik.edu.tr
+    orcid: 'https://orcid.org/0000-0002-3998-1542'
+  - name-particle: Emre
+    family-names: DANDIL
+    email: emre.dandil@bilecik.edu.tr
+    orcid: 'https://orcid.org/0000-0001-6559-1399'
