@@ -1,6 +1,4 @@
 ---
----
-
 # DeepMSWeb
 
 A Web-Based Decision Support System via Deep Learning for Automatic Detection of MS Lesions
