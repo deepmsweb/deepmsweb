@@ -41,8 +41,10 @@ after at all:
 `pip install -r requirements.txt`
 
 
-### Citing Improved Mask R-CNN
+Citing Improved Mask R-CNN
+***
 
 
-### Citing DeepMSWeb
+Citing DeepMSWeb
+***
 
