@@ -1,4 +1,3 @@
----
 # DeepMSWeb
 
 A Web-Based Decision Support System via Deep Learning for Automatic Detection of MS Lesions
@@ -40,9 +39,21 @@ after at all:
 
 
 Citing Improved Mask R-CNN
-***
+--------------------------
 
+```BibTeX
+@article{yildirim2020automatic,
+  title={Automatic detection of multiple sclerosis lesions using Mask R-CNN on magnetic resonance scans},
+  author={Yıldırım, Mehmet Süleyman and Dandıl, Emre},
+  journal={IET Image Processing},
+  volume={14},
+  number={16},
+  pages={4277--4290},
+  year={2020},
+  publisher={IET}
+}
+```
 
 Citing DeepMSWeb
-***
+----------------
 
