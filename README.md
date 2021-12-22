@@ -2,11 +2,7 @@
 
 A Web-Based Decision Support System via Deep Learning for Automatic Detection of MS Lesions
 
-
-
-https://user-images.githubusercontent.com/94227541/147167047-c2a6ba07-8348-496b-855e-035c5ad4860b.mp4
-
-
+https://user-images.githubusercontent.com/94227541/147167350-c5c1ec8d-f9ec-4514-86fb-58641dc81215.mp4
 
 ## Introduction
 
