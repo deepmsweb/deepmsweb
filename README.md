@@ -39,7 +39,6 @@ pip install -r requirements.txt
 
 Citing Improved Mask R-CNN
 --------------------------
-
 ```BibTeX
 @article{yildirim2020automatic,
   title={Automatic detection of multiple sclerosis lesions using Mask R-CNN on magnetic resonance scans},
@@ -52,9 +51,6 @@ Citing Improved Mask R-CNN
   publisher={IET}
 }
 ```
-
-Citing DeepMSWeb 
-----------------
 ```
 @inproceedings{yildirim2021automated,
   title={Automated Multiple Sclerosis Lesion Segmentation on MR Images via Mask R-CNN},
@@ -65,3 +61,17 @@ Citing DeepMSWeb
   organization={IEEE}
 }
 ```
+
+Citing DeepMSWeb 
+----------------
+```
+@inproceedings{9672360,
+  author={Yildirim, Mehmet Süleyman and Dandil, Emre},
+  booktitle={2021 2nd International Informatics and Software Engineering Conference (IISEC)}, 
+  title={DeepMSWeb: A Web-Based Decision Support System via Deep Learning for Automatic Detection of MS Lesions}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/IISEC54230.2021.9672360}}
+``` 
